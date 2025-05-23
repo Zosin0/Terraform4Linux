@@ -15,20 +15,20 @@ variable "default_region" {
 variable "subnet_name" {
     description = "Nome da sub-rede"
     type = string
-    default = "subnet-01"
+    default = "subnet-ex03"
 }
 
 variable "subnet_range" {
     description = "Range dos IP's da subnet"
     type = string
-    default = "10.0.1.0/24"
+    default = "10.240.1.0/24"
 }
 
 // Disco
 variable "disk_name" {
     description = "Variável para nome do disco"
-    type = string
-    default = "disco-01"
+    type = list(string)
+    default = ["disk-vm01", "disk-vm02"]
 }
 
 variable "type_disk" {
@@ -45,8 +45,8 @@ variable "zone" {
 
 variable "size" {
     description = "Tamanho do disco"
-    type = string
-    default = "10"  
+    type = list(string)
+    default = ["20", "40"]
 }
 
 // VPC
@@ -60,15 +60,14 @@ variable "bolean_auto_create_subnetworks" {
     description = "Criação automática de sub-redes"
     type = bool
     default = false
-  
 }
 
 // Main
 
-variable "ip_publico" {
-    type = string
-    default = "ipv4-address"
-}
+# variable "ip_publico" {
+#     type = string
+#     default = "ipv4-address"
+# }
 
 variable "fw_name" {
   type = string
@@ -88,9 +87,9 @@ variable "source_ranges" {
   default = [ "0.0.0.0/0" ]  
 }
 
-variable "vm_name" {
-  type = string
-  default = "vm-instance-exemplo"
+variable "vm_names" {
+  type = list(string)
+  default = ["vm-01", "vm-02"]
 }
 
 variable "machine_type" {
