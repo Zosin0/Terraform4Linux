@@ -1,4 +1,13 @@
-chapter6/.terraform
 chapter5/.terraform
+chapter6/.terraform
+chapter7/.terraform
+chapter8/.terraform
+chapter9/.terraform
+
 exercicio1/.terraform
 exercicio2/.terraform
+exercicio3/.terraform
+
+chapter10/.terraform
+chapter10/.terraform*
+chapter10/terraform.tfstate*
